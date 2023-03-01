@@ -10,11 +10,11 @@ variable "location" {
   default     = "eastus"
 }
 
-variable "data_bricks_name" {
+variable "data-bricks-name" {
   type        = string
   description = "Name of the azure data bricks"
 }
-variable "instance_pool_name" {
+variable "instance-pool-name" {
   type        = string
   description = "Name of the azure data bricks instance pool"
 }
@@ -22,7 +22,7 @@ variable "instance_pool_max_capacity" {
   type        = number
   description = "Maximum Capacity of the azure data bricks instance pool "
 }
-variable "cluster_name" {
+variable "cluster-name" {
   type        = string
   description = "Name of the azure data bricks cluster"
 }
