@@ -1,0 +1,20 @@
+{
+
+    
+    "data-bricks-name" :"",
+    "instance-pool-name" :"",
+    "cluster-name" : "",
+
+    "instance_pool_max_capacity" : 30,
+    "cluster_autotermination_minutes" : 10,
+    "notebook_subdirectory" : "Terraform",
+    "notebook_filename"     : "hello.py",
+    "notebook_language"    :"PYTHON",
+    
+    
+    "tags" :{
+        "created_by"       : "swathi.vijai@tigeranalytics.com",
+        "created_for"      : "training"
+        
+      }
+    }
