@@ -1,8 +1,7 @@
 tags = {
   created_by       = "swathi.vijai@tigeranalytics.com"
   created_for      = "training"
-  
-}
+  }
 
 data_bricks_name = "swathiadbdev1179"
 instance_pool_name = "swathi4ip"
