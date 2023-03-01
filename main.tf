@@ -1,5 +1,5 @@
 resource "azurerm_databricks_workspace" "adb" {
-   name                = var.data_bricks_name
+   name                = var.data-bricks-name
   resource_group_name = var.rsgrp
   location            = var.location
    sku                 = "standard"
@@ -19,7 +19,7 @@ data "databricks_spark_version" "latest_lts" {
 
 resource "databricks_instance_pool" "pool" {
   depends_on = [azurerm_databricks_workspace.adb]
-  instance_pool_name = var.instance_pool_name
+  instance_pool_name = var.instance-pool-name
   min_idle_instances = 0
   max_capacity =  var.instance_pool_max_capacity
   node_type_id = data.databricks_node_type.smallest.id
@@ -30,7 +30,7 @@ resource "databricks_instance_pool" "pool" {
 resource "databricks_cluster" "test_cluster" {
   depends_on = [databricks_instance_pool.pool]
  # instance_pool_id = databricks_instance_pool.pool.id
-  cluster_name = var.cluster_name
+  cluster_name = var.cluster-name
  spark_version = data.databricks_spark_version.latest_lts.id
 
   node_type_id = data.databricks_node_type.smallest.id
@@ -51,6 +51,9 @@ resource "databricks_notebook" "test_nb" {
   language = var.notebook_language
   source   = "./${var.notebook_filename}"
 }
+
+
+
 
 
 
